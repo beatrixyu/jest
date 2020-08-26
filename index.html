@@ -18,22 +18,36 @@
         <label for="age">Age</label>
         <input type="number" id="age" />
       </div>
-      <button id="btnAddUser" class="button">Add User</button>
+      <button onclick="btnFunction()" id="btnAddUser" class="button">
+        Add User
+      </button>
     </section>
     <hr />
     <section class="user-output">
       <ul class="user-list"></ul>
     </section>
 
-    <button onclick="myFunction()">Try it</button>
-    <script src="dist/main.js">
+    <button onclick="myFunction()">Click it</button>
+    <script src="dist/main.js"></script>
+    <script>
+      function btnFunction() {
+        var div1 = document.createElement('div');
+        document.body.appendChild(div1);
+        div1.innerHTML = document.body.querySelector('input#name').value;
+        div1.style.background = 'blue';
 
-            function myFunction() {
-        var btn = document.createElement("button");
+        var div2 = document.createElement('div');
+        document.body.appendChild(div2);
+        div2.innerHTML = document.body.querySelector('input#age').value;
+        div2.style.background = 'yellow';
+      }
+
+      function myFunction() {
+        var btn = document.createElement('button');
         document.body.appendChild(btn);
-        btn.innerHTML="button"
-        btn.style.background="red"
-        btn.className= "lllk"
+        btn.innerHTML = 'button';
+        btn.style.background = 'red';
+        btn.className = 'lllk';
       }
     </script>
   </body>
